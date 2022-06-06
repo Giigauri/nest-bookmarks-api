@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "21927992-a409-406d-959b-12d9cc3349c2",
+		"name": "NEST-BOOKMARKS-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15420185"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "gigauri5@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/authentication/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authentication",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "gigauri5@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/authentication/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authentication",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJlbWFpbCI6ImdpZ2F1cmk1QGdtYWlsLmNvbSIsImlhdCI6MTY1MzYzNDQ3OCwiZXhwIjoxNjUzNjM1Mzc4fQ.HGiO-QI3U99IG8q0yqxR9A5MXPbF79zqaT20OaQwapc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZ2lnYXVyaTVAZ21haWwuY29tIiwiaWF0IjoxNjU0MTc3NDQzLCJleHAiOjE2NTQxNzgzNDN9.aQLz2rT7MXInhnkf8wDvT8i5TCn0rueWV_fEm9X93FI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Davit",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "gigauri5@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get bookmarks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZ2lnYXVyaTVAZ21haWwuY29tIiwiaWF0IjoxNjU0NTE5ODk0LCJleHAiOjE2NTQ1MjA3OTR9.ZVUjWOg4AOsbqxzLn_VJdT-JsYVR72E2DtKu8_Yfia0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bookmarks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookmarks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create bookmark",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZ2lnYXVyaTVAZ21haWwuY29tIiwiaWF0IjoxNjU0NTE5ODk0LCJleHAiOjE2NTQ1MjA3OTR9.ZVUjWOg4AOsbqxzLn_VJdT-JsYVR72E2DtKu8_Yfia0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Kubernetes Course - Full Beginners Tutorial (Containerize Your Apps!)",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Learn how to use Kubernetes in this complete course. Kubernetes makes it possible to containerize applications and simplifies app deployment to production.",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "/19878129379",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookmarks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookmarks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update bookmark by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZ2lnYXVyaTVAZ21haWwuY29tIiwiaWF0IjoxNjU0NTE5ODk0LCJleHAiOjE2NTQ1MjA3OTR9.ZVUjWOg4AOsbqxzLn_VJdT-JsYVR72E2DtKu8_Yfia0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Kubernetes Course - Full Beginners Tutorial (Containerize Your Apps!)",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Kubernetes Course - Full Beginners",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "/19878129379",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookmarks/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookmarks",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get bookmark by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZ2lnYXVyaTVAZ21haWwuY29tIiwiaWF0IjoxNjU0NTE5ODk0LCJleHAiOjE2NTQ1MjA3OTR9.ZVUjWOg4AOsbqxzLn_VJdT-JsYVR72E2DtKu8_Yfia0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bookmarks/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookmarks",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
